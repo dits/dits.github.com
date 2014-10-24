@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://brionv.com/misc/ogv.js/demo/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+
+<script src="api.php"></script><script src="api(1).php"></script></head><body>
+
+
+	
+	<div id="main-player">
+		<div id="player" class="ogvjs-player"><ogvjs style="display: inline-block; position: relative; width: 581px; height: 327px; margin-top: 0px;"><canvas style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></canvas><img src="640px--Jarry_-_Métro_de_Montréal_(640×360).ogv.jpg" class="ogvjs-poster" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></ogvjs>
+			<div id="top-panel" style="opacity: 1;">
+				<div id="top">
+					<div id="progress-total" title="NaN">
+						<div id="progress-buffered"></div>
+						<div id="progress-processed"></div>
+						<div id="progress-played"></div>
+					</div>
+				</div>
+			</div>
+			<div id="control-panel" style="opacity: 1;">
+				<div id="controls">
+					<button class="play" title="Play" style="display: inline;">▶</button>
+					<button class="pause" title="Pause" style="display: none;">||</button>
+					<button class="stop" title="Stop">◼</button>
+					<button class="fullscreen" title="Fullscreen">v^</button>
+					<span><input type="checkbox" id="mute"><label for="mute">Mute</label></span>
+				</div>
+			</div>
+		</div>
+
+		<div id="metadata">
+
+			<canvas id="benchmark" width="500" height="200"></canvas>
+			<div id="benchmark-legend">
+				<ul>
+					<li>red: target frame rate
+					</li><li>blue: frame-to-frame clock time
+					</li><li>black: per-frame CPU time
+				</li></ul>
+			</div>
+
+			<table id="info">
+				<tbody><tr>
+					<td>
+						<div>
+							<a id="pagelink" href="https://commons.wikimedia.org/wiki/File%3AJarry_-_M%C3%A9tro_de_Montr%C3%A9al_(640%C3%97360).ogv" target="_blank">Jarry - Métro de Montréal (640×360).ogv</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							Source:
+							<select height="1" id="video-preferred-size">
+								<option value="original">original</option>
+								<option value="480p.ogv">480p</option>
+								<option value="360p.ogv">360p</option>
+								<option value="160p.ogv">160p</option>
+							</select>
+							
+							Player:
+							<select height="1" id="player-backend">
+								<option value="js">JavaScript (auto)</option>
+								<option value="js-cpu">JS no WebGL</option>
+								<option value="webgl">JS force WebGL</option>
+
+								<option value="flash">Flash</option>
+
+								<option value="native">native</option>
+								<option value="cortado">Cortado (Java)</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							Video
+							<span id="video-fps"></span>fps
+							<span id="video-pic-width"></span>x<span id="video-pic-height"></span>
+							(jitter <span id="video-jitter"></span>ms)
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							Audio
+							<span id="audio-rate"></span> Hz, <span id="audio-channels"></span> channels (<span id="audio-drops"></span> drops)
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td id="decode-rate">
+						<table id="decode-rate-table">
+							<tbody><tr>
+								<td class="bench-target">target</td>
+								<td class="bench-total">tot</td>
+								<td class="bench-demux">mux</td>
+								<td class="bench-video">vid</td>
+								<td class="bench-audio">aud</td>
+								<td class="bench-buffer">buf</td>
+								<td class="bench-draw">draw</td>
+							</tr>
+							<tr>
+								<td id="bench-target" class="bench-target"></td>
+								<td id="bench-total" class="bench-total"></td>
+								<td id="bench-demux" class="bench-demux"></td>
+								<td id="bench-video" class="bench-video"></td>
+								<td id="bench-audio" class="bench-audio"></td>
+								<td id="bench-buffer" class="bench-buffer"></td>
+								<td id="bench-draw" class="bench-draw"></td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				<tr>
+					<td><span id="status-view"></span></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>
+	
+	<div id="media-chooser-stub">
+		<!-- lightbox-style click-to-dismiss background -->
+	</div>
+	<div id="media-chooser">
+		<h2><a href="http://commons.wikimedia.org/wiki/Commons:Media_of_the_day" target="_blank">Wikimedia Commons Media of the Day</a></h2>
+		<div id="media-list">
+			<!-- ... -->
+		</div>
+	</div>
+
+	<script src="ogvjs.js"></script>
+	<script src="demo.js"></script>
+
+
+
+
+
+</body></html>
