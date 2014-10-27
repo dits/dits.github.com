@@ -317,7 +317,7 @@
 								format: format,
 								width: Math.round(imageinfo.width * height / imageinfo.height),
 								height: height,
-								url: transcodeUrl(imageinfo.url, height, format),
+								url: transcodeUrl('https://s3.amazonaws.com/chirpads-s3-development/test.ogv', height, format),
 								size: Math.round(bitrate * mediaInfo.duration / 8),
 								bitrate: bitrate
 							});
