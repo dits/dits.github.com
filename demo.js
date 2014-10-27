@@ -292,7 +292,7 @@
 				format: format,
 				width: imageinfo.width,
 				height: imageinfo.height,
-				url: 'https://s3.amazonaws.com/chirpads-s3-development/test.ogv',
+				url: 'https://commons.wikimedia.org/wiki/File%3AJarry_-_M%C3%A9tro_de_Montr%C3%A9al_%28640%C3%97360%29.ogv',
 				size: imageinfo.size,
 				bitrate: imageinfo.size * 8 / mediaInfo.duration
 			});
@@ -317,7 +317,7 @@
 								format: format,
 								width: Math.round(imageinfo.width * height / imageinfo.height),
 								height: height,
-								url: transcodeUrl('https://s3.amazonaws.com/chirpads-s3-development/test.ogv', height, format),
+								url: transcodeUrl('https://commons.wikimedia.org/wiki/File%3AJarry_-_M%C3%A9tro_de_Montr%C3%A9al_%28640%C3%97360%29.ogvjsVideoFrameRate', height, format),
 								size: Math.round(bitrate * mediaInfo.duration / 8),
 								bitrate: bitrate
 							});
