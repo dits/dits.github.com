@@ -292,7 +292,7 @@
 				format: format,
 				width: imageinfo.width,
 				height: imageinfo.height,
-				url: imageinfo.url,
+				url: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3f/Jarry_-_Métro_de_Montréal_(640×360).ogv/Jarry_-_Métro_de_Montréal_(640×360).ogv.360p.ogv',
 				size: imageinfo.size,
 				bitrate: imageinfo.size * 8 / mediaInfo.duration
 			});
@@ -317,7 +317,7 @@
 								format: format,
 								width: Math.round(imageinfo.width * height / imageinfo.height),
 								height: height,
-								url: transcodeUrl(imageinfo.url, height, format),
+								url: transcodeUrl('https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3f/Jarry_-_Métro_de_Montréal_(640×360).ogv/Jarry_-_Métro_de_Montréal_(640×360).ogv.360p.ogv', height, format),
 								size: Math.round(bitrate * mediaInfo.duration / 8),
 								bitrate: bitrate
 							});
