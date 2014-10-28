@@ -292,7 +292,7 @@
 				format: format,
 				width: imageinfo.width,
 				height: imageinfo.height,
-				url: 'https://s3.amazonaws.com/chirpads-s3-development/test.ogv',
+				url: 'http://dits.github.io/test.ogv',
 				size: imageinfo.size,
 				bitrate: imageinfo.size * 8 / mediaInfo.duration
 			});
@@ -317,7 +317,7 @@
 								format: format,
 								width: Math.round(imageinfo.width * height / imageinfo.height),
 								height: height,
-								url: 'https://s3.amazonaws.com/chirpads-s3-development/test.ogv',
+								url: 'http://dits.github.io/test.ogv',
 								size: Math.round(bitrate * mediaInfo.duration / 8),
 								bitrate: bitrate
 							});
