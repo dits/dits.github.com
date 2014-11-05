@@ -6,15 +6,26 @@
 <body>
 	<span id="spritesheet-container" style="position: absolute; clip: rect(0px, 300px, 167px, 0px);">
 	</span>
-<div id="hover"></div>
+
+<audio style="display: none;"  id="MyAudio" controls>
+  <source src="audio/1.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
 </body>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="jquery.spritevid.js"></script>
   <script type="text/javascript">
+      var audio1 = document.getElementById("MyAudio");
 
 
 
+ $("#spritesheet-container").click(function(){
+
+        audio1.play();
+     audio1.pause();
+ });
 
 
   $("#spritesheet-container").spritevid({
