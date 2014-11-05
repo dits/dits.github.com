@@ -2,10 +2,20 @@
 <head>
 
  </head>
- 
+<style>
+    #play {
+    background: url('images/play.png') center center no-repeat;
+    margin: -150px 10px 0 0;
+    height: 150px;
+    position: relative;
+    z-index: 10;
+}
+</style>
 <body>
-	<div id="spritesheet-container" style="background-color:black; width:100px;height:100px;position: absolute; clip: rect(0px, 300px, 167px, 0px);">
-	</div>
+	<div id="spritesheet-container" style="background:url('images/thumbnail.jpg') 300px 167px;;position: absolute; clip: rect(0px, 300px, 167px, 0px);">
+	<img src=images/thumbnail.jpg" width="300px" height="167px"/>
+    <div id="play"></div>
+    </div>
 
 <audio style="display: none;"  id="MyAudio" controls>
   <source src="audio/1.mp3" type="audio/mpeg">
@@ -18,13 +28,17 @@ Your browser does not support the audio element.
   <script type="text/javascript" src="jquery.spritevid.js"></script>
   <script type="text/javascript">
      var audio1 = document.getElementById("MyAudio");
-
+flag = true;
 
 
  $("#spritesheet-container").click(function(){
 
-        audio1.play();
-     audio1.pause();
+if(flag){
+    audio1.play();
+    audio1.pause();
+    $("#play").hide();
+    flag = false;
+}
  });
 
 
