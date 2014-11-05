@@ -1,0 +1,34 @@
+<html>
+<head>
+
+ </head>
+ 
+<body>
+
+<div id="hover">hoo ha</div>
+</body>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+$("#hover").click(function(){
+
+                var body = document.getElementById('hover');
+            body.innerHTML += '<audio id="audio_sprite"><p>Audio not supported</p></audio>';
+
+            // Apply the SRC to the audio tag.
+            // Q: Why don't we just do that in the step above?
+            // A: I'm not really sure why, but iOS8 doesn't like it. Sorry this is so ugly.
+            var sprite = document.getElementById( 'audio_sprite' );
+            sprite.src = 'audio/1.mp3';
+
+            // Once the metadata is loaded, call play/pause so we can play the audio later.
+            sprite.addEventListener('loadedmetadata', function() {
+                sprite.play();
+                //sprite.pause();
+            });
+
+});
+
+  </script>
+</html>
