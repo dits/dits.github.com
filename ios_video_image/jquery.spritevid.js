@@ -122,21 +122,8 @@
         }
 
         function playSound() {
+            audio1.play()
 
-            var body = document.getElementById('hover');
-            body.innerHTML += '<audio id="audio_sprite"><p>Audio not supported</p></audio>';
-
-            // Apply the SRC to the audio tag.
-            // Q: Why don't we just do that in the step above?
-            // A: I'm not really sure why, but iOS8 doesn't like it. Sorry this is so ugly.
-            var sprite = document.getElementById( 'audio_sprite' );
-            sprite.src = config.audioUrl;
-
-            // Once the metadata is loaded, call play/pause so we can play the audio later.
-            sprite.addEventListener('loadedmetadata', function() {
-                sprite.play();
-                //sprite.pause();
-            });
 
         }
 
