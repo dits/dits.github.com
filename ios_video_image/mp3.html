@@ -7,7 +7,7 @@
 
 <div id="hover">hoo ha</div>
 
-<audio controls>
+<audio  id="MyAudio" controls>
   <source src="audio/1.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
@@ -19,7 +19,10 @@ Your browser does not support the audio element.
 
 $("#hover").click(function(){
 
-                var body = document.getElementById('hover');
+  var audio1 = document.getElementById("MyAudio");
+    audio1.play();
+
+            /*    var body = document.getElementById('hover');
             body.innerHTML += '<audio id="audio_sprite"><p>Audio not supported</p></audio>';
 
             // Apply the SRC to the audio tag.
@@ -32,7 +35,7 @@ $("#hover").click(function(){
             sprite.addEventListener('loadedmetadata', function() {
                 sprite.play();
                 //sprite.pause();
-            });
+            });*/
 
 });
 
