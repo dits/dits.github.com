@@ -1,0 +1,31 @@
+<html>
+<head>
+
+ </head>
+ 
+<body>
+	<span id="spritesheet-container" style="position: absolute; clip: rect(0px, 300px, 167px, 0px);">
+	</span>
+</body>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.spritevid.js"></script>
+  <script type="text/javascript">
+
+
+
+
+
+  $("#spritesheet-container").spritevid({
+      sheetsFolderUrl: "images/",
+      filenameFormat: "sprite-#.jpg",
+      startAtNum: 0,
+      numSheets: 14,
+      numColsPerSheet: 4,
+      numRowsPerSheet: 4,
+      numSheetsToBuffer: 2,
+      fps: 15,
+      audioUrl:"audio/1.mp3"
+  });
+  </script>
+</html>
