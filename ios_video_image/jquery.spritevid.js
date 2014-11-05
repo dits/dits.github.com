@@ -122,8 +122,24 @@
         }
 
         function playSound() {
-            var audio = new Audio(config.audioUrl);
-            audio.play();
+
+            var sprite = document.createElement('audio');
+            var id = document.createAttribute('id');
+            id.nodeValue = 'audio_sprite';
+            var src = document.createAttribute('src');
+            src.nodeValue = config.audioUrl;
+
+            sprite.setAttributeNode( id );
+            sprite.setAttributeNode( src );
+
+            // Add it to the DOM
+            var body = document.getElementsByTagName('body')[0];
+            body.appendChild( sprite );
+
+            // Play/Pause to load the audio.
+            sprite.play();
+            //sprite.pause();
+
         }
 
 
