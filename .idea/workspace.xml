@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ed96cc9-378a-48a4-8d51-8a6d08abde58" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jquery.spritevid.js" afterPath="$PROJECT_DIR$/jquery.spritevid.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/play.html" afterPath="$PROJECT_DIR$/play.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dits.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,23 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ios.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ios.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6666667" vertical-offset="134" max-vertical-offset="735">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-              <folding>
-                <element signature="n#style#0;n#audio#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jquery.spritevid.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jquery.spritevid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="20.153847" vertical-offset="1889" max-vertical-offset="3045">
-              <caret line="91" column="37" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
+            <state vertical-scroll-proportion="-8.653846" vertical-offset="1935" max-vertical-offset="2955">
+              <caret line="144" column="47" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -53,8 +41,8 @@
       <file leaf-file-name="play.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/play.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7004992" vertical-offset="344" max-vertical-offset="2865">
-              <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.1514143" vertical-offset="1739" max-vertical-offset="2865">
+              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -86,8 +74,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="27" />
-    <option name="y" value="52" />
+    <option name="x" value="33" />
+    <option name="y" value="58" />
     <option name="width" value="1216" />
     <option name="height" value="722" />
   </component>
@@ -317,7 +305,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="27" y="52" width="1216" height="722" extended-state="0" />
+    <frame x="33" y="58" width="1216" height="722" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -428,7 +416,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ios.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6666667" vertical-offset="134" max-vertical-offset="735">
+        <state vertical-scroll-proportion="-1.9166666" vertical-offset="104" max-vertical-offset="735">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#audio#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -438,8 +426,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jquery.spritevid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="20.153847" vertical-offset="1889" max-vertical-offset="3045">
-          <caret line="91" column="37" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
+        <state vertical-scroll-proportion="-8.653846" vertical-offset="1935" max-vertical-offset="2955">
+          <caret line="144" column="47" selection-start-line="144" selection-start-column="47" selection-end-line="144" selection-end-column="47" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -448,8 +436,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/play.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7004992" vertical-offset="344" max-vertical-offset="2865">
-          <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.1514143" vertical-offset="1739" max-vertical-offset="2865">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

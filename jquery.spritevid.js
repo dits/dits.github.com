@@ -68,19 +68,14 @@
                     filename: filename
                 });
             }
-            console.log('init func');
 
             loadSheets();
         }
 
         function loadSheets() {
-            console.log('hi');
 
             // Load sheets asynchronously
-            console.log(sheets.length);
-            console.log(numSheetsLoaded);
             if (numSheetsLoaded < sheets.length) {
-                console.log('hoo ha');
                 var sheetImg = $("<img></img>");
 
                 sheetImg.css({
@@ -93,9 +88,7 @@
                 sheetImg.load(function () {
                     sheets[numSheetsLoaded].img = sheetImg;
                     el.append($(sheetImg));
-                    console.log('inside sheetImg load func');
 
-                    console.log(sheetImg);
 
                     if (sheetInfo.frameWidth == null || sheetInfo.frameHeight == null) {
                         sheetInfo.frameWidth = sheetImg.width();
@@ -145,10 +138,11 @@
                         left: -pos.posX,
                         top: -pos.posY
                     });
-                    console.log(-pos.posX);
-                    console.log(-pos.posY);
+                    //console.log(-pos.posX);
+                    //console.log(-pos.posY);
 
                     currFrameIndex++;
+                    console.log(currFrameIndex);
                     /*if (currFrameIndex >= config.numSheets * (sheetInfo.framesPerSheet - config.unusedFrames)) {
                         if (repeatCount < config.repeat){
                             currFrameIndex = 0;
