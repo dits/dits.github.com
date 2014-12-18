@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ed96cc9-378a-48a4-8d51-8a6d08abde58" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/play.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ios.html" afterPath="$PROJECT_DIR$/ios.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jquery.spritevid.js" afterPath="$PROJECT_DIR$/jquery.spritevid.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/play.html" afterPath="$PROJECT_DIR$/play.html" />
     </list>
     <ignored path="dits.github.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,8 +52,8 @@
       <file leaf-file-name="play.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/play.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50083196" vertical-offset="1634" max-vertical-offset="2865">
-              <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.54908484" vertical-offset="1260" max-vertical-offset="2865">
+              <caret line="106" column="10" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -450,8 +447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/play.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50083196" vertical-offset="1634" max-vertical-offset="2865">
-          <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.54908484" vertical-offset="1260" max-vertical-offset="2865">
+          <caret line="106" column="10" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
