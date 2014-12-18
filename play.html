@@ -1,0 +1,186 @@
+<html>
+<head>
+    <style>
+        .before{
+            opacity:0;
+            position: absolute;
+        }
+
+        .thumb{
+            opacity:1;
+            position: absolute;
+        }
+
+        #video{
+            position:relative;
+            width:300px;
+            height: 168px;
+            overflow:hidden;
+            z-index:4;
+        }
+
+        #video img{
+            position: absolute;
+            top:0px;
+            bottom: 0px;
+        }
+
+        #play-button{
+            position: relative;
+            z-index: 10;
+            margin: 50px 100px 0px 115px;
+        }
+        #loading-button{
+            position: relative;
+            z-index: 10;
+            opacity:0;
+            margin: 65px 100px 0px;
+
+        #spritesheet-container{
+        }
+    </style>
+</head>
+<body style="margin:0px;">
+	<div id="spritesheet-container" style="float:left;">
+    <div id="video" class="play-button" onclick="startPlay();">
+            <img id="play-button" src="img/play.png"/>
+            <img id="loading-button" src="img/loading.gif"/>
+    </div>
+    <div id="play"></div>
+    </div>
+
+<audio style="display: none;" id="MyAudio" controls>
+  <source src="http://dits.github.io/audio/1.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+</body>
+<script type="text/javascript">
+
+    var sheets = [];
+    var noOfSheets = 15; //Sheet start at 0
+    var noOfSheetsLoaded = 0;
+    var noOfCols = 3;
+    var noOfRows = 5;
+    var frameWidth = 300 * noOfCols;
+    var frameHeight = 168 * noOfRows;
+
+    var hostName = 'img/';
+    var fileNameStart = 's-';
+    var fileNameEnd = '.jpg';
+
+    var currentTime;
+    var currSheetIndex = 0;
+    var currFrameIndex = 0;
+
+    var video = document.getElementById('video');
+    var sprite = document.getElementById('spritesheet-container');
+    var play_button = document.getElementById("play-button");
+    var loading_button = document.getElementById("loading-button");
+
+
+    function startInitialization() {
+        for (var i = 0; i < noOfSheets; i++) {
+            var currFileNumber = i.toString();
+            var fileName = hostName + fileNameStart + currFileNumber + fileNameEnd;
+            sheets.push(fileName);
+        }
+        loadSheets();
+    }
+
+    function startPlay() {
+        //Get the mp3 loaded
+        play_button.style.opacity = 0;
+        loading_button.style.opacity = 1;
+
+        loadSheets();
+
+        var audio = document.getElementById("MyAudio");
+        var totalDuration = audio.duration;
+        audio.addEventListener('timeupdate', function(){
+            var totalDuration = audio.duration;
+            var currentTimeMs = currentTime = audio.currentTime*1000;
+            var current = totalDuration - currentTimeMs;
+        });
+        setTimeout(function () {
+            audio.play();
+        }, 1000/15);
+
+        updateImage();
+    }
+
+    function updateImage(){
+        //Update image based on audio location
+        //Every second we need to show 15 images like 15fps
+
+        setInterval(function(){
+
+            var sheetImg = sheets[currSheetIndex];
+            var sheetIndex = Math.floor(currFrameIndex/15);
+            var localFrameIndex = currFrameIndex %15;
+
+            var colIndex = localFrameIndex % noOfCols;
+            var rowIndex = Math.floor(localFrameIndex/noOfCols);
+
+            //Find out the frameIndex, then the position
+            var posX = colIndex * (Math.floor(frameWidth / noOfCols));
+            var posY = rowIndex * (Math.floor(frameHeight / noOfRows));
+
+            sheetImg.style.left = -posX;
+            sheetImg.style.top =  -posY;
+
+            currFrameIndex++;
+            console.log(posX);
+            console.log(posY);
+
+            if(currFrameIndex == 15){
+                currFrameIndex = 0;
+                currSheetIndex++;
+                var nextSheetImg = sheets[currSheetIndex];
+                nextSheetImg.style.opacity = 1;
+                sheetImg.style.opacity = 0;
+
+            }
+
+        }, Math.floor(1000/15));
+
+        loading_button.style.opacity = 0;
+
+    }
+
+    function loadSheets(){
+        //Pre-load Sheets, show first frame with play button.
+        var sheetImg = document.createElement("img");
+        if (noOfSheetsLoaded < sheets.length) {
+            sheetImg.src = sheets[noOfSheetsLoaded];
+            sheetImg.onload = imageOnLoad;
+            sheetImg.className = "before";
+
+            video.appendChild(sheetImg);
+        }
+    }
+
+    function imageOnLoad(){
+        if (frameWidth != 0 || frameHeight !=0){
+            //frameWidth = frameWidth * noOfCols;
+            //frameHeight = frameHeight * noOfRows;
+        }
+        //this.style.left = "0px";
+        ////this.style.top = "0px";
+        sheets[noOfSheetsLoaded] = this;
+
+        if (noOfSheetsLoaded == 0){
+            noOfSheetsLoaded++;
+            this.className = "thumb";
+        }
+        else{
+            noOfSheetsLoaded++;
+            loadSheets();
+        }
+
+    }
+
+    startInitialization();
+
+</script>
+</html>

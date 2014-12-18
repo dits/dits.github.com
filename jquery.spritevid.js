@@ -46,7 +46,6 @@
                 frameHeight: null
             };
 
-
             // Prepare filenames according to filenameFormat
             var numDigitsInFilename = 0;
             var filenamePre = "";
@@ -86,7 +85,7 @@
 
                 sheetImg.css({
                     position: "absolute",
-                    opacity: 0,
+                    opacity: 0
                     //width:'300px',
                     //height:'167px'
                 });
@@ -122,11 +121,10 @@
         }
 
         function playSound() {
-            audio1.play()
-
+            var audio1 = document.getElementById("MyAudio");
+                 flag = true;audio1.play()
 
         }
-
 
         function play() {
             playSound();
@@ -151,7 +149,7 @@
                     console.log(-pos.posY);
 
                     currFrameIndex++;
-                    if (currFrameIndex >= config.numSheets * (sheetInfo.framesPerSheet - config.unusedFrames)) {
+                    /*if (currFrameIndex >= config.numSheets * (sheetInfo.framesPerSheet - config.unusedFrames)) {
                         if (repeatCount < config.repeat){
                             currFrameIndex = 0;
                             repeatCount++;
@@ -163,7 +161,7 @@
                             stop();
                             return false;
                         }
-                    }
+                    }   */
                 }
             }, Math.floor(1000 / config.fps));
         }
@@ -184,7 +182,12 @@
                 posX: colIndex * (Math.floor(sheetInfo.frameWidth / config.numColsPerSheet)),
                 posY: rowIndex * (Math.floor(sheetInfo.frameHeight / config.numRowsPerSheet))
             }
-            
+            console.log('----')
+            //console.log(localFrameIndex);
+            //console.log(colIndex);
+           // console.log(rowIndex);
+           // console.log(sheetInfo.frameWidth);
+           // console.log(sheetInfo.frameHeight);
             return pos;
         }
 
