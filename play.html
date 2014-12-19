@@ -97,7 +97,7 @@
         play_button.style.opacity = 0;
         loading_button.style.opacity = 1;
 
-        loadSheets();
+        //loadSheets();
 
         var audio = document.getElementById("MyAudio");
         var totalDuration = audio.duration;
@@ -106,9 +106,14 @@
             var currentTimeMs = currentTime = audio.currentTime*1000;
             var current = totalDuration - currentTimeMs;
         });
-        //setTimeout(function () {
-        audio.load();
+        audio.addEventListener('canplay', function() {
             audio.play();
+        });
+
+        audio.play();
+
+        //setTimeout(function () {
+        //audio.play();
         //}, 1000/15);
 
         updateImage();
@@ -140,6 +145,7 @@
             if(currFrameIndex == 15){
                 currFrameIndex = 0;
                 currSheetIndex++;
+                console.log(sheets[currSheetIndex]);
                 var nextSheetImg = sheets[currSheetIndex];
                 nextSheetImg.style.opacity = 1;
                 sheetImg.style.opacity = 0;
@@ -157,15 +163,12 @@
 
     function loadSheets(){
         //Pre-load Sheets, show first frame with play button.
+
         var sheetImg = document.createElement("img");
-
-        if (noOfSheetsLoaded < sheets.length) {
-            sheetImg.src = sheets[noOfSheetsLoaded];
-            sheetImg.onload = imageOnLoad;
-            sheetImg.className = "before";
-
-            video.appendChild(sheetImg);
-        }
+        sheetImg.src = sheets[noOfSheetsLoaded];
+        sheetImg.onload = imageOnLoad;
+        sheetImg.className = "before";
+        video.appendChild(sheetImg);
     }
 
     function imageOnLoad(){
@@ -178,8 +181,12 @@
         }
         else{
             noOfSheetsLoaded++;
+        }
+
+        if(noOfSheets > noOfSheetsLoaded){
             loadSheets();
         }
+
     }
 
     startInitialization();
