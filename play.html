@@ -89,6 +89,7 @@
             sheets.push(fileName);
         }
         loadSheets();
+        startPlay();
     }
 
     function startPlay() {
@@ -106,6 +107,7 @@
             var current = totalDuration - currentTimeMs;
         });
         //setTimeout(function () {
+        audio.load();
             audio.play();
         //}, 1000/15);
 
