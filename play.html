@@ -44,9 +44,15 @@
             margin: 65px 100px 0px;
         }
         #mute-button{
-                        position: relative;
+            position: relative;
             z-index: 10;
             opacity: 1;
+            padding-bottom: 0px;
+        }
+        #volume-button{
+            position: relative;
+            z-index: 10;
+            opacity: 0;
             padding-bottom: 0px;
         }
     </style>
@@ -57,6 +63,7 @@
             <img id="play-button" src="img/play.png"/>
             <img id="loading-button" src="img/loading.gif"/>
             <img id="mute-button" src="img/mute.png"/>
+            <img id="volume-button" src="img/unmute.png"/>
         </div>
         <div id="play"></div>
     </div>
@@ -88,6 +95,8 @@
     var sprite = document.getElementById('spritesheet-container');
     var play_button = document.getElementById("play-button");
     var loading_button = document.getElementById("loading-button");
+    var mute_button = document.getElementById("mute-button");
+    var volume_button = document.getElementById("volume-button");
 
     function startInitialization() {
         for (var i = 0; i < noOfSheets; i++) {
@@ -96,15 +105,22 @@
             sheets.push(fileName);
         }
         loadSheets();
-        startPlay();
+        startPreview();
+    }
+
+    function startPreview(){
+        play_button.style.opacity = 0;
+        loading_button.style.opacity = 1;
+
+        updateImage();
+
     }
 
     function startPlay() {
         //Get the mp3 loaded
-        play_button.style.opacity = 0;
-        loading_button.style.opacity = 1;
 
-        //loadSheets();
+        mute_button.style.opacity = 0;
+        volume_button.style.opacity = 1;
 
         var audio = document.getElementById("MyAudio");
         var totalDuration = audio.duration;
@@ -113,18 +129,10 @@
             var currentTimeMs = currentTime = audio.currentTime*1000;
             var current = totalDuration - currentTimeMs;
         });
-        audio.addEventListener('canplay', function() {
-            audio.play();
-        });
-
-        audio.play();
-
-        //setTimeout(function () {
-        //audio.play();
-        //}, 1000/15);
 
         updateImage();
     }
+
 
     function updateImage(){
         //Update image based on audio location
