@@ -1,10 +1,15 @@
 <html>
 <body>
-<script>
-this.soundFile = new Element("audio", {id: "audio-1", src: "http://dits.github.io/audio/1.mp3", controls: ""});
-document.body.appendChild(this.soundFile);
-this.soundFile.load();
-this.soundFile.play();
+<script type="text/javascript">
+
+    var a = new Audio("http://dits.github.io/audio/1.mp3");
+
+a.addEventListener("suspend", function () {console.log('suspended')}, false);
+a.oncanplay = function() {
+    this.play();
+};
+    a.load();
+    this.play();
 
 </script>
 </body>
