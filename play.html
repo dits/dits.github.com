@@ -111,9 +111,7 @@
     function startPreview(){
         play_button.style.opacity = 0;
         loading_button.style.opacity = 1;
-
         updateImage();
-
     }
 
     function startPlay() {
@@ -130,6 +128,7 @@
             var current = totalDuration - currentTimeMs;
         });
 
+        audio.play();
         updateImage();
     }
 
