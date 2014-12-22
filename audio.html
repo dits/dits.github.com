@@ -1,13 +1,11 @@
 <html>
 <body>
 <script>
-var ifr=document.createElement("iframe");
-ifr.setAttribute('src', "http://dits.github.io/audio/1.mp3");
-ifr.setAttribute('width', '1px');
-ifr.setAttribute('height', '1px');
-ifr.setAttribute('scrolling', 'no');
-ifr.style.border="0px";
-document.body.appendChild(ifr);
+this.soundFile = new Element("audio", {id: "audio-1", src: "http://dits.github.io/audio/1.mp3", controls: ""});
+document.body.appendChild(this.soundFile);
+this.soundFile.load();
+this.soundFile.play();
+
 </script>
 </body>
 </html>
